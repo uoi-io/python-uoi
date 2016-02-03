@@ -15,7 +15,7 @@ setup(
     packages=find_packages(),
     author='Gaetan Trellu - goldyfruit',
     author_email='gaetan.trellu@incloudus.com',
-    description='Unified OpenStack Installer',
+    description='Python library for Unified OpenStack Installer',
     long_description=long_description,
     include_package_data=True,
     url='https://www.uoi.io',
