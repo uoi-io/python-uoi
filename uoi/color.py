@@ -20,7 +20,7 @@ def use_color(stream):
 
 def printc(text, color=WHITE):
     if use_color:
-        seq = "\x1b[1;%dm" % (30+color) + text + "\x1b[0m"
+        seq = "\x1b[1;%dm" % (30+color) + text + "\x1b[0m\n"
         sys.stdout.write(seq)
     else:
         sys.stdout.write(text)
