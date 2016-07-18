@@ -113,6 +113,7 @@ class Network(Base):
     interface = Column(String(255, u'utf8_unicode_ci'), nullable=False)
     slaveof = Column(String(255, u'utf8_unicode_ci'), nullable=False)
     master = Column(String(255, u'utf8_unicode_ci'), nullable=False)
+    mtu = Column(Integer, nullable=False)
     options = Column(Text(collation=u'utf8_unicode_ci'))
     vlans = Column(String(255, u'utf8_unicode_ci'))
     status = Column(Integer, nullable=False)
