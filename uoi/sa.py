@@ -111,12 +111,15 @@ class Network(Base):
     asset_id = Column(ForeignKey(u'Assets.id'), index=True)
     type = Column(String(255, u'utf8_unicode_ci'), nullable=False)
     interface = Column(String(255, u'utf8_unicode_ci'), nullable=False)
+    ipaddr = Column(String(15, u'utf8_unicode_ci'), nullable=False)
+    netmask = Column(String(15, u'utf8_unicode_ci'), nullable=False)
+    gateway = Column(String(15, u'utf8_unicode_ci'), nullable=False)
     slaveof = Column(String(255, u'utf8_unicode_ci'), nullable=False)
-    master = Column(String(255, u'utf8_unicode_ci'), nullable=False)
+    master = Column(Boolean, nullable=False)
     mtu = Column(Integer, nullable=False)
     options = Column(Text(collation=u'utf8_unicode_ci'))
-    vlans = Column(String(255, u'utf8_unicode_ci'))
-    status = Column(Integer, nullable=False)
+    vlanid = Column(String(4, u'utf8_unicode_ci'))
+    status = Column(Boolean, nullable=False)
 
     asset = relationship(u'Asset')
 
