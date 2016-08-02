@@ -65,9 +65,6 @@ class Configuration(Base):
 
     id = Column(Integer, primary_key=True)
     hostname = Column(String(255, u'utf8_unicode_ci'), nullable=False, unique=True)
-    ipaddr = Column(String(15, u'utf8_unicode_ci'), nullable=False)
-    netmask = Column(String(15, u'utf8_unicode_ci'), nullable=False)
-    gateway = Column(String(15, u'utf8_unicode_ci'), nullable=False)
     domain = Column(String(255, u'utf8_unicode_ci'), nullable=False)
     distribution = Column(String(255, u'utf8_unicode_ci'), nullable=False)
     extraconf = Column(Text(collation=u'utf8_unicode_ci'), nullable=False)
